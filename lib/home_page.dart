@@ -24,7 +24,14 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Drag et Drop List'),
       ),
-      body: HomePage(),
+      body: ReorderableListView(
+        children: [
+          for (final tile in myTiles)
+            ListTile(
+              title: Text(tile),
+            )
+        ],
+      ),
     );
   }
 }
