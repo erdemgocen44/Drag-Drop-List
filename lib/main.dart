@@ -1,3 +1,4 @@
+import 'package:drap_drop_list/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const DragDropList());
@@ -9,7 +10,7 @@ class DragDropList extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: 
+      home: HomePage(),
     );
   }
 }
