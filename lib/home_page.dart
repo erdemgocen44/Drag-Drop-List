@@ -10,6 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  //list of tilesss
   final List myTiles = [
     'Aliquam tincidunt mauris eu risus.',
     'Vestibulum auctor dapibus neque.',
@@ -17,6 +18,14 @@ class _HomePageState extends State<HomePage> {
     'Cras ornare tristique elit.',
     'Vivamus vestibulum ntulla nec ante.'
   ];
+
+  //reorder method
+  void updateMyTiles(int oldIndex, int newIndex) {
+    setState(() {
+      //get te tilie
+      final tile = myTiles.removeAt(oldIndex);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
