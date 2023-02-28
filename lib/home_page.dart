@@ -28,9 +28,11 @@ class _HomePageState extends State<HomePage> {
         children: [
           for (final tile in myTiles)
             ListTile(
+              key: ValueKey(tile),
               title: Text(tile),
             )
         ],
+        onReorder: ((oldIndex, newIndex) => () {}),
       ),
     );
   }
