@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
               title: Text(tile),
             )
         ],
-        onReorder: (oldIndex, newIndex) => () {},
+        onReorder: (oldIndex, newIndex) => updateMyTiles(oldIndex, newIndex),
       ),
     );
   }
