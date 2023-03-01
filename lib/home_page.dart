@@ -22,8 +22,17 @@ class _HomePageState extends State<HomePage> {
   //reorder method
   void updateMyTiles(int oldIndex, int newIndex) {
     setState(() {
+//an adjusment is needed when moving the tile
+      if (oldIndex < newIndex) {
+        newIndex--;
+      }
+
       //get te tilie
       final tile = myTiles.removeAt(oldIndex);
+
+      //plaec the tile in the new positions
+
+      myTiles.insert(newIndex, tile);
     });
   }
 
@@ -41,7 +50,7 @@ class _HomePageState extends State<HomePage> {
               title: Text(tile),
             )
         ],
-        onReorder: ((oldIndex, newIndex) => () {}),
+        onReorder: (oldIndex, newIndex) => () {},
       ),
     );
   }
